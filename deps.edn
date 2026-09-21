@@ -7,6 +7,10 @@
  :deps
  {;; Application
   org.clojure/clojure {:mvn/version "1.12.3"}
+  org.clojure/data.xml {:mvn/version "0.0.8"}
+  org.babashka/http-client {:mvn/version "0.4.22"}
+  org.jsoup/jsoup {:mvn/version "1.23.2"}
+  cheshire/cheshire {:mvn/version "6.2.0"}
   com.brunobonacci/mulog {:mvn/version "0.9.0"}}
  ;; ---------------------------------------------------------
 

@@ -1,0 +1,61 @@
+{
+  "data": {
+    "discountNodes": {
+      "nodes": [
+        {
+          "discount": {
+            "discountId": "gid://shopify/DiscountCodeNode/1111111111111",
+            "title": "Discount 1",
+            "status": "EXPIRED",
+            "startsAt": "2026-08-28T18:56:50Z",
+            "endsAt": "2026-08-28T19:31:40Z"
+          }
+        },
+        {
+          "discount": {
+            "discountId": "gid://shopify/DiscountCodeNode/1111111111112",
+            "title": "Discount 2",
+            "status": "EXPIRED",
+            "startsAt": "2026-08-28T19:02:35Z",
+            "endsAt": "2026-08-28T19:21:04Z"
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 20,
+      "actualQueryCost": 14,
+      "throttleStatus": {
+        "maximumAvailable": 20000,
+        "currentlyAvailable": 19986,
+        "restoreRate": 1000
+      }
+    },
+    "search": [
+      {
+        "path": [
+          "discountNodes"
+        ],
+        "query": "discount_type:app status:expired title:No*",
+        "parsed": {
+          "and": [
+            {
+              "field": "discount_type",
+              "match_all": "app"
+            },
+            {
+              "field": "status",
+              "match_all": "expired"
+            },
+            {
+              "field": "title",
+              "match_prefix": "No"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
